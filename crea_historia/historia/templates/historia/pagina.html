@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+{% load static %}  <!DOCTYPE html>
 <html>
 <head>
     <title>{{ titulo }}</title>
 </head>
 <body>
     <h1>{{ titulo }}</h1>
-    <img src="{{ imagen }}">
+    
+    <img src="{% static 'historia/'|add:imagen %}">
+    
     <p>{{ texto }}</p>
 
     <a href="{% url 'bosque' %}">
