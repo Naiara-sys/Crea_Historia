@@ -12,18 +12,20 @@ def inicio(request):
 def bosque(request):
     contexto = {
         'titulo': 'El bosque encantado',
-        'texto': 'El bosque es oscuro, pero sientes una energía extraña a tu alrededor.',
-        'imagen': 'bosque.png'  # <--- CAMBIAR POR EL NOMBRE DE TU ARCHIVO
+        'texto': 'El bosque es oscuro, pero sientes una energía extraña. ¿Qué harás ahora?',
+        'imagen': 'bosque.png' 
     }
-    return render(request, 'historia/pagina.html', contexto)
+    # CAMBIO CRÍTICO: Usar decision.html
+    return render(request, 'historia/decision.html', contexto) 
 
 def cueva(request):
     contexto = {
         'titulo': 'La cueva misteriosa',
-        'texto': 'Dentro de la cueva escuchas ruidos inquietantes.',
-        'imagen': 'cueva.png'  # <--- CAMBIAR POR EL NOMBRE DE TU ARCHIVO
+        'texto': 'Dentro de la cueva escuchas ruidos inquietantes. ¿A dónde irás?',
+        'imagen': 'cueva.png' 
     }
-    return render(request, 'historia/pagina.html', contexto)
+    # CAMBIO CRÍTICO: Usar decision.html
+    return render(request, 'historia/decision.html', contexto)
 
 # Asegúrate de que las funciones final_bueno y final_malo también usen nombres de archivos locales:
 def final_bueno(request):
