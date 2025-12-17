@@ -5,7 +5,7 @@ def inicio(request):
     contexto = {
         'titulo': 'La aventura comienza',
         'texto': 'Te despiertas en un mundo desconocido. Frente a ti hay dos caminos.',
-        'imagen': 'aventura.png' # <--- ¡CAMBIA ESTO! Debe ser el nombre del archivo local
+        'imagen': 'aventura.jpg' # <--- ¡CAMBIA ESTO! Debe ser el nombre del archivo local
     }
     return render(request, 'historia/pagina.html', contexto)
 
