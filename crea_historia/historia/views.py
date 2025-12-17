@@ -27,12 +27,11 @@ def cueva(request):
     # CAMBIO CRÍTICO: Usar decision.html
     return render(request, 'historia/decision.html', contexto)
 
-# Asegúrate de que las funciones final_bueno y final_malo también usen nombres de archivos locales:
 def final_bueno(request):
     contexto = {
         'titulo': 'Final feliz',
         'texto': '¡Has sobrevivido a la aventura!',
-        'imagen': 'final_bueno.png' # <--- CAMBIAR POR EL NOMBRE DE TU ARCHIVO
+        'imagen': 'primerfin.png'
     }
     return render(request, 'historia/final.html', contexto)
 
@@ -40,6 +39,6 @@ def final_malo(request):
     contexto = {
         'titulo': 'Fin de la aventura',
         'texto': 'Has caído en una trampa...',
-        'imagen': 'final_malo.png' # <--- CAMBIAR POR EL NOMBRE DE TU ARCHIVO
+        'imagen': 'segundofin.png' 
     }
     return render(request, 'historia/final.html', contexto)
